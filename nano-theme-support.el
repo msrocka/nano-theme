@@ -155,17 +155,17 @@
   :type 'boolean :group 'nano-theme)
 
 (defface nano-mono
-  '((t (:family "Roboto Mono"
+  '((t (:family "Rec Mono Casual"
         :height 140
-        :weight light)))
-  "Default monospaced font (Roboto Mono Light, 14pt)."
+        :weight normal)))
+  "Default monospaced font (Rec Mono Casual, 14pt)."
   :group 'nano-theme-fonts)
 
 (defface nano-mono-alt
   '((t (:family "Fira Code"
         :height 140
-        :weight light)))
-  "Alternative monospaced font (Fira Code Light, 14pt)."
+        :weight normal)))
+  "Alternative monospaced font (Fira Code, 14pt)."
   :group 'nano-theme-fonts)
 
 (defface nano-sans
@@ -210,7 +210,7 @@
   "Faded face is for information that are less important."
   :type 'color :group 'nano-theme-light)
 
-(defcustom nano-light-salient "#673AB7" ;; Deep Purple / L500
+(defcustom nano-light-salient "#0A5175" ;; #107AB0 #673AB7 Deep Purple / L500
   "Salient color is used for information that are important."
   :type 'color :group 'nano-theme-light)
 
@@ -395,7 +395,7 @@ background color that is barely perceptible."
   (setq fill-column 80)
 
   ;; Bar cursor
-  (setq-default cursor-type '(hbar .  2))
+  ;; (setq-default cursor-type '(hbar .  2))
   (setq-default cursor-in-non-selected-windows nil)
   (setq blink-cursor-mode nil)
 
