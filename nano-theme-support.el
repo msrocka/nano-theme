@@ -210,7 +210,7 @@
   "Faded face is for information that are less important."
   :type 'color :group 'nano-theme-light)
 
-(defcustom nano-light-salient "#0A5175" ;; #107AB0 #673AB7 Deep Purple / L500
+(defcustom nano-light-salient "#456990" ;; #107AB0 #673AB7 Deep Purple / L500
   "Salient color is used for information that are important."
   :type 'color :group 'nano-theme-light)
 
@@ -218,11 +218,11 @@
   "Strong color is used for information of a structural nature."
   :type 'color :group 'nano-theme-light)
 
-(defcustom nano-light-popout "#FFAB91" ;; Deep Orange / L200
+(defcustom nano-light-popout "#AB2158" ;; #FFAB91 Deep Orange / L200
   "Popout colour is used for information that needs attention."
   :type 'color :group 'nano-theme-light)
 
-(defcustom nano-light-critical "#FF6F00" ;; Amber / L900
+(defcustom nano-light-critical "#F45B69" ;; #FF6F00 Amber / L900
   "Critical face is for information that requires immediate action."
   :type 'color :group 'nano-theme-light)
 
@@ -1115,6 +1115,8 @@ background color that is barely perceptible."
    '(org-verse                               ((t (:inherit nano-faded))))
    '(org-warning                             ((t (:inherit nano-popout))))
 
+   '(eshell-prompt ((t (:inherit nano-popout))))
+   
    ;; --- Mu4e ---------------------------------------------------------
    '(mu4e-attach-number-face                ((t (:inherit nano-strong))))
    '(mu4e-cited-1-face                       ((t (:inherit nano-faded))))
