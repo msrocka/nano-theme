@@ -242,11 +242,11 @@
   "Subtle color is used to suggest a physical area on the screen."
   :type 'color :group 'nano-theme-dark)
 
-(defcustom nano-dark-faded "#677691" ;;
+(defcustom nano-dark-faded "#8391aa" ;; #677691
   "Faded face is for information that are less important."
   :type 'color :group 'nano-theme-dark)
 
-(defcustom nano-dark-salient "#81A1C1" ;; Frost         / nord  9
+(defcustom nano-dark-salient "#daeafd" ;; #81A1C1 Frost / nord  9
   "Salient color is used for information that are important."
   :type 'color :group 'nano-theme-dark)
 
@@ -582,12 +582,15 @@ background color that is barely perceptible."
                                 :family ,(face-attribute 'nano-sans :family)))))))
 
     (unless nano-fonts-use
-        (custom-theme-set-faces theme
-         `(default ((,light (:foreground ,nano-light-foreground))
-                    (,dark  (:foreground ,nano-dark-foreground))))
-         `(nano-strong ((,light (:weight bold :foreground ,nano-light-strong))
-                        (,dark  (:weight bold :foreground ,nano-dark-strong))))))
-
+      (custom-theme-set-faces
+       theme
+       `(default ((,light (:foreground ,nano-light-foreground))
+                  (,dark  (:foreground ,nano-dark-foreground))))
+       `(nano-strong ((,light (:weight bold :foreground ,nano-light-strong))
+                      (,dark  (:weight bold :foreground ,nano-dark-strong))))
+       `(nano-italic ((,light (:slant italic :foreground ,nano-light-strong))
+                      (,dark  (:slant italic :foreground ,nano-dark-strong))))))
+       
     ;; --- Window divider ----------------------------------------------
     (if nano-window-divider-show
         (custom-theme-set-faces theme
@@ -727,8 +730,9 @@ background color that is barely perceptible."
    ;; --- Structural ---------------------------------------------------
    '(bold                        ((t (:inherit nano-strong))))
    ;; '(italic                      ((t (:slant italic))))
-   '(italic                      ((t (:inherit nano-faded))))
-   '(bold-italic                 ((t (:inherit nano-strong))))
+   ;;'(italic                      ((t (:inherit nano-faded))))
+   '(italic ((t (:inherit nano-italic))))
+   '(bold-italic                 ((t (:inherit (nano-strong nano-italic)))))
    '(region                      ((t (:inherit nano-subtle :distant-foreground unspecified))))
    '(fringe                      ((t (:inherit (nano-faded)))))
    '(hl-line                     ((t (:inherit highlight))))
@@ -787,16 +791,17 @@ background color that is barely perceptible."
    '(diff-hl-delete                  ((t (:inherit nano-critical-i))))
 
    ;; --- Font lock ----------------------------------------------------
-   '(font-lock-comment-face        ((t (:inherit nano-faded))))
-   '(font-lock-doc-face            ((t (:inherit nano-faded))))
+   '(font-lock-comment-face        ((t (:inherit nano-italic))))
+   '(font-lock-doc-face            ((t (:inherit nano-italic))))
    '(font-lock-string-face         ((t (:inherit nano-faded))))
    '(font-lock-constant-face       ((t (:inherit nano-salient))))
    '(font-lock-warning-face        ((t (:inherit nano-popout))))
    '(font-lock-function-name-face  ((t (:inherit nano-strong))))
-   '(font-lock-variable-name-face  ((t (:inherit (nano-strong nano-salient)))))
+   '(font-lock-variable-name-face  ((t (:inherit nano-default))))
    '(font-lock-builtin-face        ((t (:inherit nano-salient))))
-   '(font-lock-type-face           ((t (:inherit nano-salient))))
+   '(font-lock-type-face           ((t (:inherit nano-strong))))
    '(font-lock-keyword-face        ((t (:inherit nano-salient))))
+   '(font-lock-property-face       ((t (:inherit nano-default))))
 
    ;; --- Custom edit --------------------------------------------------
    '(widget-field                  ((t (:inherit nano-subtle))))
