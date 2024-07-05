@@ -242,11 +242,11 @@
   "Subtle color is used to suggest a physical area on the screen."
   :type 'color :group 'nano-theme-dark)
 
-(defcustom nano-dark-faded "#8391aa" ;; #677691
+(defcustom nano-dark-faded "#81a1c1" ;; #8391aa #677691
   "Faded face is for information that are less important."
   :type 'color :group 'nano-theme-dark)
 
-(defcustom nano-dark-salient "#daeafd" ;; #81A1C1 Frost / nord  9
+(defcustom nano-dark-salient "#C5DFFC" ;; #daeafd #81A1C1 Frost / nord  9
   "Salient color is used for information that are important."
   :type 'color :group 'nano-theme-dark)
 
@@ -254,7 +254,7 @@
   "Strong color is used for information of a structural nature."
   :type 'color :group 'nano-theme-dark)
 
-(defcustom nano-dark-popout "#D08770" ;; Aurora        / nord 12
+(defcustom nano-dark-popout "#ebcb8b" ;; #D08770 Aurora        / nord 12
   "Popout colour is used for information that needs attention."
   :type 'color :group 'nano-theme-dark)
 
@@ -1036,6 +1036,10 @@ background color that is barely perceptible."
    '(flyspell-incorrect             ((t (:inherit nano-popout
                                          :underline t))))
 
+   ;; --- neo-tree
+   '(neo-root-dir-face ((t (:inherit nano-salient :weight bold))))
+   '(neo-dir-link-face ((t (:inherit nano-salient :weight bold))))
+   
    ;; --- Org agenda ---------------------------------------------------
    '(org-agenda-calendar-event      ((t (:inherit nano-default))))
    '(org-agenda-calendar-sexp       ((t (:inherit nano-salient))))
