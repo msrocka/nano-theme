@@ -796,10 +796,10 @@ background color that is barely perceptible."
    '(font-lock-string-face         ((t (:inherit nano-faded))))
    '(font-lock-constant-face       ((t (:inherit nano-salient))))
    '(font-lock-warning-face        ((t (:inherit nano-popout))))
-   '(font-lock-function-name-face  ((t (:inherit nano-strong))))
+   '(font-lock-function-name-face  ((t (:inherit nano-default))))
    '(font-lock-variable-name-face  ((t (:inherit nano-default))))
    '(font-lock-builtin-face        ((t (:inherit nano-salient))))
-   '(font-lock-type-face           ((t (:inherit nano-strong))))
+   '(font-lock-type-face           ((t (:inherit nano-default))))
    '(font-lock-keyword-face        ((t (:inherit nano-salient))))
    '(font-lock-property-face       ((t (:inherit nano-default))))
 
